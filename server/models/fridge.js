@@ -67,7 +67,7 @@ module.exports = function(Fridge) {
 	Fridge.remoteMethod("removeProduct", {
 		accepts: [
 			{arg: 'req', type: 'object', http: {source: 'req'}},
-			{arg: 'productId', type: 'String', http: {source: 'query'}}
+			{arg: 'productId', type: 'String', http: {source: 'path'}}
 		],
 		returns: {arg: "fridge", type: "Fridge"},
 	    description: "Remove product from fridge by id",

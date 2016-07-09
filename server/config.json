@@ -23,5 +23,14 @@
       "disableStackTrace": false
     }
   },
-  "legacyExplorer": false
+  "legacyExplorer": false,
+  "social": {
+    "vkontakte": {
+      "appId": 5539197,
+      "appSecret": "q6UfKZ27PUU5xzM5Vzsr"
+    }
+  },
+  "auth": {
+    "ttl": 43200
+  }
 }

@@ -36,5 +36,13 @@
   "Product": {
     "dataSource": "db",
     "public": true
+  },
+  "Account": {
+    "dataSource": "db",
+    "public": true
+  },
+  "SocialToken": {
+    "dataSource": null,
+    "public": false
   }
 }

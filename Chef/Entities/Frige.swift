@@ -66,10 +66,7 @@ class FrigeRequester {
             productIds.append(product.getId())
         }
         
-        var productsIdsDict = Dictionary<String, [String]>()
-        productsIdsDict["productIds"] = productIds
-        
-        let jsonIds = try! NSJSONSerialization.dataWithJSONObject(productsIdsDict, options: .PrettyPrinted)
+        let jsonIds = try! NSJSONSerialization.dataWithJSONObject(productIds, options: .PrettyPrinted)
         
         let url = FrigeUrls.addToFrige.rawValue
         

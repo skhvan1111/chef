@@ -1,6 +1,11 @@
 {
   "db": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "geekbrains_project",
+    "username": "user",
+    "password": "1NFUSsiaexlh",
     "name": "db",
-    "connector": "memory"
+    "connector": "mongodb"
   }
 }

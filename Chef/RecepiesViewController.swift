@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecepiesViewController: UIViewController {
+class CategoryRecepiesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,29 @@ class RecepiesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func selectSnack(sender: AnyObject) {
+    }
+    
+    @IBAction func selectHealthyFood(sender: AnyObject) {
+    }
 
+    @IBAction func selectSalad(sender: AnyObject) {
+    }
+    
+    @IBAction func selectMeet(sender: AnyObject) {
+    }
+    
+    @IBAction func selectBreakfast(sender: AnyObject) {
+    }
+    
+    @IBAction func selectBakery(sender: AnyObject) {
+    }
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

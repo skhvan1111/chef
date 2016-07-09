@@ -10,6 +10,7 @@
 		A1255E441D317385001EF3CB /* RecepiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1255E431D317385001EF3CB /* RecepiesViewController.swift */; };
 		A1255E461D3173B9001EF3CB /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1255E451D3173B9001EF3CB /* FridgeViewController.swift */; };
 		A1255E481D317817001EF3CB /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1255E471D317817001EF3CB /* AddProductViewController.swift */; };
+		A1255E4A1D318D66001EF3CB /* AllRecepiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1255E491D318D66001EF3CB /* AllRecepiesViewController.swift */; };
 		AF055D1B1D314C550014282C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF055D1A1D314C550014282C /* AppDelegate.swift */; };
 		AF055D1D1D314C550014282C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF055D1C1D314C550014282C /* ViewController.swift */; };
 		AF055D201D314C550014282C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF055D1E1D314C550014282C /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		A1255E431D317385001EF3CB /* RecepiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecepiesViewController.swift; sourceTree = "<group>"; };
 		A1255E451D3173B9001EF3CB /* FridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		A1255E471D317817001EF3CB /* AddProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		A1255E491D318D66001EF3CB /* AllRecepiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllRecepiesViewController.swift; sourceTree = "<group>"; };
 		AF055D171D314C550014282C /* Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF055D1A1D314C550014282C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF055D1C1D314C550014282C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				AF055D1A1D314C550014282C /* AppDelegate.swift */,
 				AF055D1C1D314C550014282C /* ViewController.swift */,
 				AF055D1E1D314C550014282C /* Main.storyboard */,
+				A1255E491D318D66001EF3CB /* AllRecepiesViewController.swift */,
 				A1255E471D317817001EF3CB /* AddProductViewController.swift */,
 				A1255E451D3173B9001EF3CB /* FridgeViewController.swift */,
 				A1255E431D317385001EF3CB /* RecepiesViewController.swift */,
@@ -215,6 +218,7 @@
 				A1255E461D3173B9001EF3CB /* FridgeViewController.swift in Sources */,
 				A1255E441D317385001EF3CB /* RecepiesViewController.swift in Sources */,
 				AF055D1B1D314C550014282C /* AppDelegate.swift in Sources */,
+				A1255E4A1D318D66001EF3CB /* AllRecepiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Chef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChefTeam.Chef;
@@ -354,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Chef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChefTeam.Chef;

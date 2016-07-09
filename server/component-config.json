@@ -1,4 +1,7 @@
 {
+  "loopback-component-current-user": {
+    "user": "Account"
+  },
   "loopback-component-explorer": {
     "mountPath": "/explorer"
   }

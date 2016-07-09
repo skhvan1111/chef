@@ -21,6 +21,8 @@ function getAccountByUserId(userId){
 function getVkontakteProfile(client){
 	return new Promise(function(resolve, reject){
 		client.request("users.get", {fields: ["photo_100"]}, (response)=> {
+			if(!response ||  !response.response) return Promise.reject();
+			
 			console.log("getVkontakteProfile", response);
 			return resolve(response.response.length > 0 ? response.response[0] : null);
 		})
@@ -28,15 +30,17 @@ function getVkontakteProfile(client){
 }
 
 function createAccountByVKotakteProfile(profile){
+	var fullName = `${profile.first_name} ${profile.last_name}`;
 	return app.models.Account.create({
 		username: `user_${profile.id}`,
 		tokens: [{
 			provider: app.models.SocialToken.PROVIDERS.vkontakte,
 			userId: profile.id,
-			fullName: `${profile.first_name} ${profile.last_name}`,
+			fullName: fullName,
 			email: profile.email
 		}],
-		avatarUrl: profile.photo_100
+		avatarUrl: profile.photo_100,
+		fullname: fullName
 	})
 }
 

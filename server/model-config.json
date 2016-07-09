@@ -44,5 +44,9 @@
   "SocialToken": {
     "dataSource": null,
     "public": false
+  },
+  "Fridge": {
+    "dataSource": "db",
+    "public": true
   }
 }

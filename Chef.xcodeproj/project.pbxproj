@@ -18,6 +18,10 @@
 		AF055D251D314C550014282C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF055D241D314C550014282C /* Assets.xcassets */; };
 		AF055D281D314C550014282C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF055D261D314C550014282C /* LaunchScreen.storyboard */; };
 		AF055D331D314C550014282C /* ChefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF055D321D314C550014282C /* ChefTests.swift */; };
+		AF45043D1D319DBB007B459A /* Frige.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF45043B1D319DBB007B459A /* Frige.swift */; };
+		AF45043E1D319DBB007B459A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF45043C1D319DBB007B459A /* Product.swift */; };
+		AF4504411D319E00007B459A /* MainUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504401D319E00007B459A /* MainUser.swift */; };
+		AF4504441D319E14007B459A /* HTTPProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504431D319E14007B459A /* HTTPProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		AF055D2E1D314C550014282C /* ChefTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF055D321D314C550014282C /* ChefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefTests.swift; sourceTree = "<group>"; };
 		AF055D341D314C550014282C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF45043B1D319DBB007B459A /* Frige.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Frige.swift; sourceTree = "<group>"; };
+		AF45043C1D319DBB007B459A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		AF4504401D319E00007B459A /* MainUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainUser.swift; sourceTree = "<group>"; };
+		AF4504431D319E14007B459A /* HTTPProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,8 @@
 		AF055D191D314C550014282C /* Chef */ = {
 			isa = PBXGroup;
 			children = (
+				AF45043F1D319DF0007B459A /* Logic */,
+				AF45043A1D319D87007B459A /* Entity */,
 				AF055D1A1D314C550014282C /* AppDelegate.swift */,
 				AF055D1C1D314C550014282C /* ViewController.swift */,
 				AF055D1E1D314C550014282C /* Main.storyboard */,
@@ -109,6 +119,33 @@
 				AF055D341D314C550014282C /* Info.plist */,
 			);
 			path = ChefTests;
+			sourceTree = "<group>";
+		};
+		AF45043A1D319D87007B459A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AF45043B1D319DBB007B459A /* Frige.swift */,
+				AF45043C1D319DBB007B459A /* Product.swift */,
+			);
+			name = Entity;
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AF45043F1D319DF0007B459A /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AF4504421D319E04007B459A /* HTTPProcessor */,
+				AF4504401D319E00007B459A /* MainUser.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		AF4504421D319E04007B459A /* HTTPProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				AF4504431D319E14007B459A /* HTTPProcessor.swift */,
+			);
+			path = HTTPProcessor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4504441D319E14007B459A /* HTTPProcessor.swift in Sources */,
 				AF055D231D314C550014282C /* Chef.xcdatamodeld in Sources */,
 				AF055D1D1D314C550014282C /* ViewController.swift in Sources */,
+				AF45043E1D319DBB007B459A /* Product.swift in Sources */,
 				A1255E481D317817001EF3CB /* AddProductViewController.swift in Sources */,
+				AF45043D1D319DBB007B459A /* Frige.swift in Sources */,
+				AF4504411D319E00007B459A /* MainUser.swift in Sources */,
 				A1255E461D3173B9001EF3CB /* FridgeViewController.swift in Sources */,
 				A1255E441D317385001EF3CB /* RecepiesViewController.swift in Sources */,
 				AF055D1B1D314C550014282C /* AppDelegate.swift in Sources */,

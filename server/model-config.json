@@ -48,5 +48,17 @@
   "Fridge": {
     "dataSource": "db",
     "public": true
+  },
+  "Recipe": {
+    "dataSource": "db",
+    "public": true
+  },
+  "RecipeStep": {
+    "dataSource": null,
+    "public": false
+  },
+  "Ingredient": {
+    "dataSource": "db",
+    "public": false
   }
 }

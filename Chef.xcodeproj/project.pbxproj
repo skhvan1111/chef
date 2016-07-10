@@ -18,6 +18,7 @@
 		AF055D251D314C550014282C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF055D241D314C550014282C /* Assets.xcassets */; };
 		AF055D281D314C550014282C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF055D261D314C550014282C /* LaunchScreen.storyboard */; };
 		AF055D331D314C550014282C /* ChefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF055D321D314C550014282C /* ChefTests.swift */; };
+		AF3182291D3229B5001A458B /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3182281D3229B5001A458B /* RegisterController.swift */; };
 		AF45043D1D319DBB007B459A /* Frige.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF45043B1D319DBB007B459A /* Frige.swift */; };
 		AF45043E1D319DBB007B459A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF45043C1D319DBB007B459A /* Product.swift */; };
 		AF4504411D319E00007B459A /* MainUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504401D319E00007B459A /* MainUser.swift */; };
@@ -33,6 +34,8 @@
 		AF9A95741D320B0200A24512 /* RecipeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A95731D320B0200A24512 /* RecipeViewCell.swift */; };
 		AF9A95771D32112D00A24512 /* RecipeStepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A95761D32112D00A24512 /* RecipeStepsController.swift */; };
 		AF9A95791D321A0D00A24512 /* RecipeEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A95781D321A0D00A24512 /* RecipeEndViewController.swift */; };
+		AF9A957C1D3221E100A24512 /* AuthorizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A957B1D3221E100A24512 /* AuthorizeController.swift */; };
+		AF9A957E1D3222B200A24512 /* AuthorizeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A957D1D3222B200A24512 /* AuthorizeUser.swift */; };
 		BD5DCC9548FA0D3600F8E950 /* libPods-Chef.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E56377D82B45CA7DF18402 /* libPods-Chef.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,7 @@
 		AF055D2E1D314C550014282C /* ChefTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF055D321D314C550014282C /* ChefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefTests.swift; sourceTree = "<group>"; };
 		AF055D341D314C550014282C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF3182281D3229B5001A458B /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		AF45043B1D319DBB007B459A /* Frige.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Frige.swift; sourceTree = "<group>"; };
 		AF45043C1D319DBB007B459A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		AF4504401D319E00007B459A /* MainUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainUser.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		AF9A95731D320B0200A24512 /* RecipeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewCell.swift; sourceTree = "<group>"; };
 		AF9A95761D32112D00A24512 /* RecipeStepsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeStepsController.swift; sourceTree = "<group>"; };
 		AF9A95781D321A0D00A24512 /* RecipeEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeEndViewController.swift; sourceTree = "<group>"; };
+		AF9A957B1D3221E100A24512 /* AuthorizeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeController.swift; sourceTree = "<group>"; };
+		AF9A957D1D3222B200A24512 /* AuthorizeUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeUser.swift; sourceTree = "<group>"; };
 		B19C6E4DF639C192AC4FD962 /* Pods-Chef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chef/Pods-Chef.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,7 @@
 		AF055D191D314C550014282C /* Chef */ = {
 			isa = PBXGroup;
 			children = (
+				AF9A957A1D3221B900A24512 /* AuthLogic */,
 				AF4504531D31E142007B459A /* Views */,
 				AF45044D1D31D1A0007B459A /* BridgeObjC */,
 				AF45043F1D319DF0007B459A /* Logic */,
@@ -238,6 +245,16 @@
 				AF9A95781D321A0D00A24512 /* RecipeEndViewController.swift */,
 			);
 			path = RecipeSteps;
+			sourceTree = "<group>";
+		};
+		AF9A957A1D3221B900A24512 /* AuthLogic */ = {
+			isa = PBXGroup;
+			children = (
+				AF9A957B1D3221E100A24512 /* AuthorizeController.swift */,
+				AF9A957D1D3222B200A24512 /* AuthorizeUser.swift */,
+				AF3182281D3229B5001A458B /* RegisterController.swift */,
+			);
+			path = AuthLogic;
 			sourceTree = "<group>";
 		};
 		DAD3D83FB79018C2990D1DC6 /* Pods */ = {
@@ -415,7 +432,10 @@
 				AF4504411D319E00007B459A /* MainUser.swift in Sources */,
 				AF9A956D1D32078B00A24512 /* Model.swift in Sources */,
 				A1255E461D3173B9001EF3CB /* FridgeViewController.swift in Sources */,
+				AF9A957C1D3221E100A24512 /* AuthorizeController.swift in Sources */,
+				AF3182291D3229B5001A458B /* RegisterController.swift in Sources */,
 				AF9A95791D321A0D00A24512 /* RecipeEndViewController.swift in Sources */,
+				AF9A957E1D3222B200A24512 /* AuthorizeUser.swift in Sources */,
 				AF9A95701D3208CD00A24512 /* LoadRecipesViewController.swift in Sources */,
 				AF9A95771D32112D00A24512 /* RecipeStepsController.swift in Sources */,
 				AF9A956B1D3201A100A24512 /* FridgeViewCell.swift in Sources */,

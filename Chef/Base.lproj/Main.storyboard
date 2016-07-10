@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Authorize Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AuthorizeController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,15 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-mf-OP3">
-                                <rect key="frame" x="119" y="431" width="137" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="137" id="jOd-56-6C3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Введите e-mail" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7aP-Lo-RHR">
                                 <rect key="frame" x="40" y="297" width="296" height="30"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -46,6 +37,9 @@
                                 <state key="normal" title="Войти">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="authorizeUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eln-0V-Qi1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SV-zJ-qWf">
                                 <rect key="frame" x="16" y="112" width="343" height="90"/>
@@ -68,21 +62,31 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9W-Le-Xqr">
+                                <rect key="frame" x="141" y="418" width="92" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Регистрация">
+                                    <color key="titleColor" red="0.17974885471204194" green="0.17974885471204194" blue="0.17974885471204194" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jRR-SF-Fos" kind="show" id="uNX-ic-DeR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="u9W-Le-Xqr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Gk-6h-ccN"/>
                             <constraint firstItem="9SV-zJ-qWf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5IV-04-JkD"/>
                             <constraint firstItem="9SV-zJ-qWf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="95f-tc-QrU"/>
                             <constraint firstItem="9SV-zJ-qWf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FcV-3n-oNc"/>
-                            <constraint firstItem="7aP-Lo-RHR" firstAttribute="centerX" secondItem="jZl-mf-OP3" secondAttribute="centerX" id="Hxn-s0-WwK"/>
                             <constraint firstItem="7aP-Lo-RHR" firstAttribute="top" secondItem="9SV-zJ-qWf" secondAttribute="bottom" constant="95" id="MUF-9A-1Zp"/>
                             <constraint firstItem="7aP-Lo-RHR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="297" id="P72-VS-uAc"/>
                             <constraint firstItem="7aP-Lo-RHR" firstAttribute="leading" secondItem="YMj-qn-ZZv" secondAttribute="leading" id="PiG-Tm-7gM"/>
                             <constraint firstItem="YMj-qn-ZZv" firstAttribute="top" secondItem="7aP-Lo-RHR" secondAttribute="bottom" constant="8" symbolic="YES" id="YQi-yQ-Npk"/>
-                            <constraint firstItem="jZl-mf-OP3" firstAttribute="top" secondItem="31N-eu-wve" secondAttribute="bottom" constant="21" id="Zhp-kl-S8H"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jZl-mf-OP3" secondAttribute="bottom" constant="215" id="axZ-5p-sMr"/>
+                            <constraint firstItem="31N-eu-wve" firstAttribute="top" secondItem="YMj-qn-ZZv" secondAttribute="bottom" constant="12" id="bJP-RW-Hld"/>
                             <constraint firstItem="YMj-qn-ZZv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cku-er-YcO"/>
                             <constraint firstItem="7aP-Lo-RHR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="iQd-kW-5Ok"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u9W-Le-Xqr" secondAttribute="bottom" constant="219" id="ppM-sM-gy4"/>
                             <constraint firstItem="9SV-zJ-qWf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="t6P-ax-CMa"/>
                             <constraint firstItem="7aP-Lo-RHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tre-HU-OeJ"/>
                             <constraint firstItem="7aP-Lo-RHR" firstAttribute="centerX" secondItem="31N-eu-wve" secondAttribute="centerX" id="z9M-fi-zF7"/>
@@ -94,10 +98,104 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="authUser" destination="31N-eu-wve" id="Ae0-4S-5Tv"/>
+                        <outlet property="loginField" destination="7aP-Lo-RHR" id="zQg-8B-yfP"/>
+                        <outlet property="passwordField" destination="YMj-qn-ZZv" id="BdA-93-FdB"/>
+                        <segue destination="olu-cJ-IBl" kind="show" identifier="AuthAccepted" id="S3Q-Si-hLh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="216.5" y="366.5"/>
+        </scene>
+        <!--Register Controller-->
+        <scene sceneID="d2l-vh-DEk">
+            <objects>
+                <viewController id="jRR-SF-Fos" customClass="RegisterController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7HN-mm-Qux"/>
+                        <viewControllerLayoutGuide type="bottom" id="i6K-ST-16d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3RR-7m-4NH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-Vo-kxm">
+                                <rect key="frame" x="39" y="251" width="296" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="MI2-dQ-dSR"/>
+                                </constraints>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7p8-62-FUe">
+                                <rect key="frame" x="111" y="379" width="146" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Создать Аккаунт">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="register:" destination="jRR-SF-Fos" eventType="touchUpInside" id="b6F-oY-kYR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-0R-0bk">
+                                <rect key="frame" x="12" y="112" width="343" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Sad-0R-0bk" secondAttribute="height" multiplier="335:84" id="cZK-PS-0Fo"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Chef">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="72" name="BodoniSvtyTwoITCTT-BookIta"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cZK-PS-0Fo"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Od5-eL-6eQ">
+                                <rect key="frame" x="39" y="295" width="296" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jv7-bF-E5i">
+                                <rect key="frame" x="39" y="341" width="296" height="30"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i6K-ST-16d" firstAttribute="top" secondItem="7p8-62-FUe" secondAttribute="bottom" constant="255" id="LuQ-h0-F0j"/>
+                            <constraint firstItem="iKo-Vo-kxm" firstAttribute="top" secondItem="Sad-0R-0bk" secondAttribute="bottom" constant="49" id="Yd1-xb-52u"/>
+                            <constraint firstItem="iKo-Vo-kxm" firstAttribute="leading" secondItem="Jv7-bF-E5i" secondAttribute="leading" id="cHv-WK-sQJ"/>
+                            <constraint firstItem="7p8-62-FUe" firstAttribute="leading" secondItem="3RR-7m-4NH" secondAttribute="leadingMargin" constant="91" id="fpX-vG-tEu"/>
+                            <constraint firstItem="iKo-Vo-kxm" firstAttribute="centerX" secondItem="7p8-62-FUe" secondAttribute="centerX" constant="3" id="n4a-dg-hxo"/>
+                            <constraint firstItem="7p8-62-FUe" firstAttribute="top" secondItem="Jv7-bF-E5i" secondAttribute="bottom" constant="8" symbolic="YES" id="oF3-am-6d9"/>
+                            <constraint firstItem="Jv7-bF-E5i" firstAttribute="top" secondItem="iKo-Vo-kxm" secondAttribute="bottom" constant="60" id="okh-Xh-f9l"/>
+                            <constraint firstItem="7p8-62-FUe" firstAttribute="centerX" secondItem="Sad-0R-0bk" secondAttribute="centerX" id="xTB-XB-clz"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailField" destination="iKo-Vo-kxm" id="qJ3-mR-9sp"/>
+                        <outlet property="loginField" destination="Od5-eL-6eQ" id="iA4-a0-ibl"/>
+                        <outlet property="passField" destination="Jv7-bF-E5i" id="Qtn-wc-3QK"/>
+                        <segue destination="olu-cJ-IBl" kind="show" identifier="RegisterSuccess" id="Buj-LU-sdu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjP-xq-Aim" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.5" y="1233.5"/>
         </scene>
         <!--Рецепты-->
         <scene sceneID="n25-Yy-NPG">
@@ -196,7 +294,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WSP-Ut-D35">
                                 <rect key="frame" x="20" y="265" width="335" height="282"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqU-N0-jEA">
@@ -244,7 +342,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вы приготовили блюдо. Поздравляем!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-vq-UYV">
                                 <rect key="frame" x="33" y="323" width="308" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzC-AI-1WC">
@@ -435,4 +533,7 @@
         <image name="list-fat-7" width="30" height="30"/>
         <image name="shopping-cart-7" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="S3Q-Si-hLh"/>
+    </inferredMetricsTieBreakers>
 </document>

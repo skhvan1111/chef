@@ -9,13 +9,20 @@
 import UIKit
 
 class FridgeViewController: UITableViewController {
+    
+    private var fridge: Fridge = Fridge()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController!.navigationBar.titleTextAttributes = ([NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 20)!,
                                                                     NSForegroundColorAttributeName: UIColor.whiteColor()])
         
-
+        FridgeRequester.loadFridge { (fridge) in
+            self.fridge = fridge
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
+        }
 
     }
     
@@ -28,71 +35,38 @@ class FridgeViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+}
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
 
+extension FridgeViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.fridge.getProducts().count
     }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("FridgeCell") as! FridgeViewCell
+        let product = self.fridge.getProducts()[indexPath.row]
+        cell.productName.text = product.getName()
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
+    
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
-    // Override to support editing the table view.
+    
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        let product = self.fridge.getProducts()[indexPath.row]
+        
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            self.fridge.removeProduct(product)
+            FridgeRequester.deleteProductFromFridge(product, completion: { (isDeleted) in
+                if isDeleted == false { print("ERROR!") }
+                else {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+                    })
+                }
+            })
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

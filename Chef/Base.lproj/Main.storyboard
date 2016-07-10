@@ -210,13 +210,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="142" id="Tdb-q0-UzK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FridgeCell" rowHeight="142" id="Tdb-q0-UzK" customClass="FridgeViewCell" customModule="Chef" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="142"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tdb-q0-UzK" id="6iw-3v-GSg">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Flo-pN-xCe">
+                                            <rect key="frame" x="8" y="23" width="138" height="95"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="VtM-O3-Dpc">
+                                            <rect key="frame" x="154" y="23" width="213" height="95"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="productImage" destination="Flo-pN-xCe" id="21H-TB-WlY"/>
+                                    <outlet property="productName" destination="VtM-O3-Dpc" id="No0-I9-krp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -269,6 +284,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="mMx-b1-NVs" id="DSK-fJ-t8B"/>
+                                    <outlet property="productImage" destination="k6V-P0-E7V" id="RsT-I5-aMV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -284,6 +303,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="productSearch" destination="Byy-5V-SGb" id="FLC-j5-PfU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIu-Wd-afz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

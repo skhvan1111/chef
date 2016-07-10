@@ -27,6 +27,12 @@ class Fridge {
             }
         }
     }
+    
+    func removeProduct(product: Product) {
+        for (index, prod) in self.products.enumerate() {
+            if prod.getId() == product.getId() { self.products.removeAtIndex(index) }
+        }
+    }
 }
 
 

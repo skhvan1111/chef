@@ -1,5 +1,5 @@
 //
-//  ProductViewCell.swift
+//  FridgeViewCell.swift
 //  Chef
 //
 //  Created by Кирилл Салтыков on 10.07.16.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ProductViewCell: UITableViewCell {
+class FridgeViewCell: UITableViewCell {
 
-    //@IBOutlet weak var image: UIImage!
     @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var name: UILabel!
-
-    var product: Product!
+    @IBOutlet weak var productName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,7 +12,8 @@ class LoadRecipesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController!.navigationBar.titleTextAttributes = ([NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 20)!,
+            NSForegroundColorAttributeName: UIColor.whiteColor()])
         // Do any additional setup after loading the view.
     }
 

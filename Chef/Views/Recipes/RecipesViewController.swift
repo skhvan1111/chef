@@ -15,6 +15,8 @@ class RecipesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Model.shared.recipesViewController = self
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,7 +30,6 @@ class RecipesViewController: UITableViewController {
             })
         }
     }
-
 }
 
 
@@ -45,5 +46,11 @@ extension RecipesViewController {
         }
         
         return cell
+    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("RecipeInfo") as! RecipeStepsController
+        vc.setUpRecipe(self.recipes[indexPath.row])
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -12,5 +12,7 @@ class Model {
     static let shared = Model()
     
     var fridgeViewController: FridgeViewController?
+    var recipesViewController: RecipesViewController?
     
+    var recipes: [Recipe] = []
 }

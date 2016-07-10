@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1255E441D317385001EF3CB /* RecepiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1255E431D317385001EF3CB /* RecepiesViewController.swift */; };
 		A1255E461D3173B9001EF3CB /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1255E451D3173B9001EF3CB /* FridgeViewController.swift */; };
-		A1255E481D317817001EF3CB /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1255E471D317817001EF3CB /* AddProductViewController.swift */; };
-		A1255E4A1D318D66001EF3CB /* AllRecepiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1255E491D318D66001EF3CB /* AllRecepiesViewController.swift */; };
 		AF055D1B1D314C550014282C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF055D1A1D314C550014282C /* AppDelegate.swift */; };
 		AF055D1D1D314C550014282C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF055D1C1D314C550014282C /* ViewController.swift */; };
 		AF055D201D314C550014282C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF055D1E1D314C550014282C /* Main.storyboard */; };
@@ -50,10 +47,7 @@
 
 /* Begin PBXFileReference section */
 		30E56377D82B45CA7DF18402 /* libPods-Chef.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chef.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1255E431D317385001EF3CB /* RecepiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecepiesViewController.swift; sourceTree = "<group>"; };
 		A1255E451D3173B9001EF3CB /* FridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
-		A1255E471D317817001EF3CB /* AddProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
-		A1255E491D318D66001EF3CB /* AllRecepiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllRecepiesViewController.swift; sourceTree = "<group>"; };
 		A29F34AF2A3D2093DFECDC38 /* Pods-Chef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chef.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chef/Pods-Chef.release.xcconfig"; sourceTree = "<group>"; };
 		AF055D171D314C550014282C /* Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF055D1A1D314C550014282C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,11 +141,8 @@
 				AF055D1A1D314C550014282C /* AppDelegate.swift */,
 				AF055D1C1D314C550014282C /* ViewController.swift */,
 				AF055D1E1D314C550014282C /* Main.storyboard */,
-				A1255E491D318D66001EF3CB /* AllRecepiesViewController.swift */,
-				A1255E471D317817001EF3CB /* AddProductViewController.swift */,
 				A1255E451D3173B9001EF3CB /* FridgeViewController.swift */,
 				AF9A956A1D3201A100A24512 /* FridgeViewCell.swift */,
-				A1255E431D317385001EF3CB /* RecepiesViewController.swift */,
 				AF055D241D314C550014282C /* Assets.xcassets */,
 				AF055D261D314C550014282C /* LaunchScreen.storyboard */,
 				AF055D291D314C550014282C /* Info.plist */,
@@ -314,7 +305,6 @@
 				TargetAttributes = {
 					AF055D161D314C550014282C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = Q5T7YHXSHE;
 					};
 					AF055D2D1D314C550014282C = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -371,7 +361,6 @@
 				AF055D1D1D314C550014282C /* ViewController.swift in Sources */,
 				AF4504481D31BD4C007B459A /* Recipe.swift in Sources */,
 				AF45043E1D319DBB007B459A /* Product.swift in Sources */,
-				A1255E481D317817001EF3CB /* AddProductViewController.swift in Sources */,
 				AF4504521D31DF2D007B459A /* ProductsAddViewController.swift in Sources */,
 				AF9A95721D320ADE00A24512 /* RecipesViewController.swift in Sources */,
 				AF45043D1D319DBB007B459A /* Frige.swift in Sources */,
@@ -387,10 +376,8 @@
 				AF9A95701D3208CD00A24512 /* LoadRecipesViewController.swift in Sources */,
 				AF9A95771D32112D00A24512 /* RecipeStepsController.swift in Sources */,
 				AF9A956B1D3201A100A24512 /* FridgeViewCell.swift in Sources */,
-				A1255E441D317385001EF3CB /* RecepiesViewController.swift in Sources */,
 				AF055D1B1D314C550014282C /* AppDelegate.swift in Sources */,
 				AF45044A1D31BDC7007B459A /* Step.swift in Sources */,
-				A1255E4A1D318D66001EF3CB /* AllRecepiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +514,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChefTeam.Chef;
+				PRODUCT_BUNDLE_IDENTIFIER = Chef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chef/BridgeObjC/Chef-Bridging-Header.h";
@@ -547,7 +534,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChefTeam.Chef;
+				PRODUCT_BUNDLE_IDENTIFIER = Chef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chef/BridgeObjC/Chef-Bridging-Header.h";

@@ -27,7 +27,7 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     }
 
     @IBAction func loginInVk(sender: AnyObject) {
-        VKSdk.authorize([VK_PER_OFFLINE, VK_PER_NOHTTPS])
+        //VKSdk.authorize([VK_PER_OFFLINE])
     }
     
     func vkSdkShouldPresentViewController(controller: UIViewController!) {

@@ -24,7 +24,6 @@ class HTTPProcessor: HTTP {
         self.session = NSURLSession(configuration: self.sessionConfiguration)
     }
     
-    
     func sendRequest(type: RequestType, url: String, data: NSData, compl: (NSData?, NSError?) -> Void) {
         
         let uri = NSURL(string: url+"?access_token=\(MainUser.loadToken()!)")!
@@ -50,9 +49,39 @@ class HTTPProcessor: HTTP {
         task.resume()
     }
     
-    
-    
 }
+
+class SearchProcessor: HTTPProcessor {
+    
+    private var searching: String = ""
+    
+    func addSearch(text: String) {
+        self.searching = text
+    }
+    
+    override func sendRequest(type: RequestType, url: String, data: NSData, compl: (NSData?, NSError?) -> Void) {
+        
+        let searchString: NSString = searching.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        
+        let str = url+"?access_token=\(MainUser.loadToken()!)&filter[where][name][like]=\(searchString)"
+        let nurl = NSURL(string: str)
+        let req = NSMutableURLRequest(URL: nurl!)
+        req.HTTPMethod = "GET"
+        req.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        
+        
+        let task = session.dataTaskWithRequest(req) { (data, response, error) in
+            if error != nil { compl(nil, error) }
+            if data != nil {
+                compl(data, nil)
+            }
+        }
+        
+        task.resume()
+    }
+}
+
 
 enum RequestType {
     case GET

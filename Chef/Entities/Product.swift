@@ -13,6 +13,7 @@ class Product {
     private let imageUrl: String
     private let id: String
     private var outOfFrige: Bool = false
+    private var isChecked = false
     
     init(id: String, name: String, imageUrl: String) {
         self.id = id
@@ -25,6 +26,8 @@ class Product {
     func getImageUrl() -> String { return self.imageUrl }
     
     func setAviability(outOfFrige: Bool) { self.outOfFrige = outOfFrige }
+    func setChecked(check: Bool) { self.isChecked = check }
+    func isCheck() -> Bool { return self.isChecked }
 }
 
 class ProductMapper {
@@ -59,11 +62,15 @@ class ProductMapper {
     // Parse collection of products
     class func parseProducts(data: NSData) -> [Product] {
         let parsedData = try! NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-        let parsedProducts = parsedData as! NSArray
+        let parsedProducts = parsedData as? NSArray
+        
+        if parsedProducts == nil {
+            return [parseProduct(data)]
+        }
         
         var products: [Product] = []
         
-        for parsedProduct in parsedProducts {
+        for parsedProduct in parsedProducts! {
             let productDict = parsedProduct as! NSDictionary
             
             products.append(Product(
@@ -101,6 +108,18 @@ class ProductRequester {
             let product = ProductMapper.parseProduct(data!)
             
             completion(product)
+        }
+    }
+    
+    class func searchProduct(name: String, completion: ([Product]) -> Void) {
+        let proc = SearchProcessor()
+        proc.addSearch(name)
+        proc.sendRequest(RequestType.GET, url: ProductUrls.GetAll.rawValue, data: NSData()) { (data, error) in
+            if error != nil { print("\(error)\n\n\(error?.userInfo)") }
+            
+            let products = ProductMapper.parseProducts(data!)
+            
+            completion(products)
         }
     }
 }

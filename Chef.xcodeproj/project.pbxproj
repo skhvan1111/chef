@@ -27,6 +27,8 @@
 		AF45044C1D31D19B007B459A /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF45044B1D31D19B007B459A /* libVK-ios-sdk.a */; };
 		AF4504521D31DF2D007B459A /* ProductsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504511D31DF2D007B459A /* ProductsAddViewController.swift */; };
 		AF4504561D31E1E3007B459A /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504551D31E1E3007B459A /* ProductViewCell.swift */; };
+		AF9A956B1D3201A100A24512 /* FridgeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A956A1D3201A100A24512 /* FridgeViewCell.swift */; };
+		AF9A956D1D32078B00A24512 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A956C1D32078B00A24512 /* Model.swift */; };
 		BD5DCC9548FA0D3600F8E950 /* libPods-Chef.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E56377D82B45CA7DF18402 /* libPods-Chef.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		AF45044E1D31D1C2007B459A /* Chef-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chef-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF4504511D31DF2D007B459A /* ProductsAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsAddViewController.swift; sourceTree = "<group>"; };
 		AF4504551D31E1E3007B459A /* ProductViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
+		AF9A956A1D3201A100A24512 /* FridgeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewCell.swift; sourceTree = "<group>"; };
+		AF9A956C1D32078B00A24512 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B19C6E4DF639C192AC4FD962 /* Pods-Chef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chef/Pods-Chef.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,11 +137,13 @@
 				A1255E491D318D66001EF3CB /* AllRecepiesViewController.swift */,
 				A1255E471D317817001EF3CB /* AddProductViewController.swift */,
 				A1255E451D3173B9001EF3CB /* FridgeViewController.swift */,
+				AF9A956A1D3201A100A24512 /* FridgeViewCell.swift */,
 				A1255E431D317385001EF3CB /* RecepiesViewController.swift */,
 				AF055D241D314C550014282C /* Assets.xcassets */,
 				AF055D261D314C550014282C /* LaunchScreen.storyboard */,
 				AF055D291D314C550014282C /* Info.plist */,
 				AF055D211D314C550014282C /* Chef.xcdatamodeld */,
+				AF9A956C1D32078B00A24512 /* Model.swift */,
 			);
 			path = Chef;
 			sourceTree = "<group>";
@@ -376,7 +382,9 @@
 				AF45043D1D319DBB007B459A /* Frige.swift in Sources */,
 				AF4504561D31E1E3007B459A /* ProductViewCell.swift in Sources */,
 				AF4504411D319E00007B459A /* MainUser.swift in Sources */,
+				AF9A956D1D32078B00A24512 /* Model.swift in Sources */,
 				A1255E461D3173B9001EF3CB /* FridgeViewController.swift in Sources */,
+				AF9A956B1D3201A100A24512 /* FridgeViewCell.swift in Sources */,
 				A1255E441D317385001EF3CB /* RecepiesViewController.swift in Sources */,
 				AF055D1B1D314C550014282C /* AppDelegate.swift in Sources */,
 				AF45044A1D31BDC7007B459A /* Step.swift in Sources */,

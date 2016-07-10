@@ -19,14 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Введите e-mail" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7aP-Lo-RHR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7aP-Lo-RHR">
                                 <rect key="frame" x="40" y="297" width="296" height="30"/>
+                                <color key="backgroundColor" red="0.77238424289999996" green="0.89903059549999997" blue="0.87005046890000004" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Введите пароль" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMj-qn-ZZv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMj-qn-ZZv">
                                 <rect key="frame" x="40" y="335" width="296" height="30"/>
+                                <color key="backgroundColor" red="0.77238424289999996" green="0.89903059549999997" blue="0.87005046890000004" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -121,17 +123,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-Vo-kxm">
-                                <rect key="frame" x="39" y="251" width="296" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKo-Vo-kxm">
+                                <rect key="frame" x="35" y="251" width="296" height="30"/>
+                                <color key="backgroundColor" red="0.78138036960000001" green="0.9095017997" blue="0.88018413529999995" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="MI2-dQ-dSR"/>
                                 </constraints>
-                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7p8-62-FUe">
-                                <rect key="frame" x="111" y="379" width="146" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7p8-62-FUe">
+                                <rect key="frame" x="107" y="379" width="146" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Создать Аккаунт">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,8 +142,8 @@
                                     <action selector="register:" destination="jRR-SF-Fos" eventType="touchUpInside" id="b6F-oY-kYR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-0R-0bk">
-                                <rect key="frame" x="12" y="112" width="343" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-0R-0bk">
+                                <rect key="frame" x="117" y="112" width="125" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sad-0R-0bk" secondAttribute="height" multiplier="335:84" id="cZK-PS-0Fo"/>
                                 </constraints>
@@ -161,27 +163,36 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Od5-eL-6eQ">
-                                <rect key="frame" x="39" y="295" width="296" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Od5-eL-6eQ">
+                                <rect key="frame" x="35" y="289" width="296" height="30"/>
+                                <color key="backgroundColor" red="0.78138036960000001" green="0.9095017997" blue="0.88018413529999995" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="Vee-Op-beD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jv7-bF-E5i">
-                                <rect key="frame" x="39" y="341" width="296" height="30"/>
-                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jv7-bF-E5i">
+                                <rect key="frame" x="35" y="327" width="296" height="30"/>
+                                <color key="backgroundColor" red="0.78138036960000001" green="0.9095017997" blue="0.88018413529999995" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="Wk6-Vi-xRY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Od5-eL-6eQ" firstAttribute="top" secondItem="iKo-Vo-kxm" secondAttribute="bottom" constant="8" id="AAR-Ga-MJS"/>
+                            <constraint firstItem="Od5-eL-6eQ" firstAttribute="leading" secondItem="3RR-7m-4NH" secondAttribute="leading" constant="35" id="Jzm-fH-cDa"/>
                             <constraint firstItem="i6K-ST-16d" firstAttribute="top" secondItem="7p8-62-FUe" secondAttribute="bottom" constant="255" id="LuQ-h0-F0j"/>
                             <constraint firstItem="iKo-Vo-kxm" firstAttribute="top" secondItem="Sad-0R-0bk" secondAttribute="bottom" constant="49" id="Yd1-xb-52u"/>
                             <constraint firstItem="iKo-Vo-kxm" firstAttribute="leading" secondItem="Jv7-bF-E5i" secondAttribute="leading" id="cHv-WK-sQJ"/>
                             <constraint firstItem="7p8-62-FUe" firstAttribute="leading" secondItem="3RR-7m-4NH" secondAttribute="leadingMargin" constant="91" id="fpX-vG-tEu"/>
                             <constraint firstItem="iKo-Vo-kxm" firstAttribute="centerX" secondItem="7p8-62-FUe" secondAttribute="centerX" constant="3" id="n4a-dg-hxo"/>
-                            <constraint firstItem="7p8-62-FUe" firstAttribute="top" secondItem="Jv7-bF-E5i" secondAttribute="bottom" constant="8" symbolic="YES" id="oF3-am-6d9"/>
-                            <constraint firstItem="Jv7-bF-E5i" firstAttribute="top" secondItem="iKo-Vo-kxm" secondAttribute="bottom" constant="60" id="okh-Xh-f9l"/>
+                            <constraint firstItem="7p8-62-FUe" firstAttribute="top" secondItem="Jv7-bF-E5i" secondAttribute="bottom" constant="22" id="oF3-am-6d9"/>
+                            <constraint firstItem="Jv7-bF-E5i" firstAttribute="top" secondItem="iKo-Vo-kxm" secondAttribute="bottom" constant="46" id="okh-Xh-f9l"/>
                             <constraint firstItem="7p8-62-FUe" firstAttribute="centerX" secondItem="Sad-0R-0bk" secondAttribute="centerX" id="xTB-XB-clz"/>
                         </constraints>
                     </view>
@@ -195,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjP-xq-Aim" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216.5" y="1233.5"/>
+            <point key="canvasLocation" x="216.5" y="1200.5"/>
         </scene>
         <!--Рецепты-->
         <scene sceneID="n25-Yy-NPG">

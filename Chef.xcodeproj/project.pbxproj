@@ -24,6 +24,10 @@
 		AF4504441D319E14007B459A /* HTTPProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504431D319E14007B459A /* HTTPProcessor.swift */; };
 		AF4504481D31BD4C007B459A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504471D31BD4C007B459A /* Recipe.swift */; };
 		AF45044A1D31BDC7007B459A /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504491D31BDC7007B459A /* Step.swift */; };
+		AF45044C1D31D19B007B459A /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF45044B1D31D19B007B459A /* libVK-ios-sdk.a */; };
+		AF4504521D31DF2D007B459A /* ProductsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504511D31DF2D007B459A /* ProductsAddViewController.swift */; };
+		AF4504561D31E1E3007B459A /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504551D31E1E3007B459A /* ProductViewCell.swift */; };
+		BD5DCC9548FA0D3600F8E950 /* libPods-Chef.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E56377D82B45CA7DF18402 /* libPods-Chef.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30E56377D82B45CA7DF18402 /* libPods-Chef.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chef.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1255E431D317385001EF3CB /* RecepiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecepiesViewController.swift; sourceTree = "<group>"; };
 		A1255E451D3173B9001EF3CB /* FridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		A1255E471D317817001EF3CB /* AddProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		A1255E491D318D66001EF3CB /* AllRecepiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllRecepiesViewController.swift; sourceTree = "<group>"; };
+		A29F34AF2A3D2093DFECDC38 /* Pods-Chef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chef.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chef/Pods-Chef.release.xcconfig"; sourceTree = "<group>"; };
 		AF055D171D314C550014282C /* Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF055D1A1D314C550014282C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF055D1C1D314C550014282C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,11 @@
 		AF4504431D319E14007B459A /* HTTPProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPProcessor.swift; sourceTree = "<group>"; };
 		AF4504471D31BD4C007B459A /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		AF4504491D31BDC7007B459A /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		AF45044B1D31D19B007B459A /* libVK-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libVK-ios-sdk.a"; path = "Pods/../build/Debug-iphoneos/VK-ios-sdk/libVK-ios-sdk.a"; sourceTree = "<group>"; };
+		AF45044E1D31D1C2007B459A /* Chef-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chef-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF4504511D31DF2D007B459A /* ProductsAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsAddViewController.swift; sourceTree = "<group>"; };
+		AF4504551D31E1E3007B459A /* ProductViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
+		B19C6E4DF639C192AC4FD962 /* Pods-Chef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chef/Pods-Chef.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF45044C1D31D19B007B459A /* libVK-ios-sdk.a in Frameworks */,
+				BD5DCC9548FA0D3600F8E950 /* libPods-Chef.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6007F44D8123CEDF74BE3B9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF45044B1D31D19B007B459A /* libVK-ios-sdk.a */,
+				30E56377D82B45CA7DF18402 /* libPods-Chef.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF055D0E1D314C550014282C = {
 			isa = PBXGroup;
 			children = (
 				AF055D191D314C550014282C /* Chef */,
 				AF055D311D314C550014282C /* ChefTests */,
 				AF055D181D314C550014282C /* Products */,
+				DAD3D83FB79018C2990D1DC6 /* Pods */,
+				6007F44D8123CEDF74BE3B9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +123,8 @@
 		AF055D191D314C550014282C /* Chef */ = {
 			isa = PBXGroup;
 			children = (
+				AF4504531D31E142007B459A /* Views */,
+				AF45044D1D31D1A0007B459A /* BridgeObjC */,
 				AF45043F1D319DF0007B459A /* Logic */,
 				AF45043A1D319D87007B459A /* Entity */,
 				AF055D1A1D314C550014282C /* AppDelegate.swift */,
@@ -154,6 +180,40 @@
 			path = HTTPProcessor;
 			sourceTree = "<group>";
 		};
+		AF45044D1D31D1A0007B459A /* BridgeObjC */ = {
+			isa = PBXGroup;
+			children = (
+				AF45044E1D31D1C2007B459A /* Chef-Bridging-Header.h */,
+			);
+			path = BridgeObjC;
+			sourceTree = "<group>";
+		};
+		AF4504531D31E142007B459A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF4504541D31E154007B459A /* ProductsAdd */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF4504541D31E154007B459A /* ProductsAdd */ = {
+			isa = PBXGroup;
+			children = (
+				AF4504511D31DF2D007B459A /* ProductsAddViewController.swift */,
+				AF4504551D31E1E3007B459A /* ProductViewCell.swift */,
+			);
+			path = ProductsAdd;
+			sourceTree = "<group>";
+		};
+		DAD3D83FB79018C2990D1DC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B19C6E4DF639C192AC4FD962 /* Pods-Chef.debug.xcconfig */,
+				A29F34AF2A3D2093DFECDC38 /* Pods-Chef.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF055D371D314C550014282C /* Build configuration list for PBXNativeTarget "Chef" */;
 			buildPhases = (
+				174E3969DE75F7D5881F0D99 /* [CP] Check Pods Manifest.lock */,
 				AF055D131D314C550014282C /* Sources */,
 				AF055D141D314C550014282C /* Frameworks */,
 				AF055D151D314C550014282C /* Resources */,
+				3A9E90975865A41E1CA6135A /* [CP] Embed Pods Frameworks */,
+				5F0EEA76E86D98E535B0EDAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +313,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		174E3969DE75F7D5881F0D99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3A9E90975865A41E1CA6135A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chef/Pods-Chef-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F0EEA76E86D98E535B0EDAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chef/Pods-Chef-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF055D131D314C550014282C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,7 +372,9 @@
 				AF4504481D31BD4C007B459A /* Recipe.swift in Sources */,
 				AF45043E1D319DBB007B459A /* Product.swift in Sources */,
 				A1255E481D317817001EF3CB /* AddProductViewController.swift in Sources */,
+				AF4504521D31DF2D007B459A /* ProductsAddViewController.swift in Sources */,
 				AF45043D1D319DBB007B459A /* Frige.swift in Sources */,
+				AF4504561D31E1E3007B459A /* ProductViewCell.swift in Sources */,
 				AF4504411D319E00007B459A /* MainUser.swift in Sources */,
 				A1255E461D3173B9001EF3CB /* FridgeViewController.swift in Sources */,
 				A1255E441D317385001EF3CB /* RecepiesViewController.swift in Sources */,
@@ -394,25 +507,42 @@
 		};
 		AF055D381D314C550014282C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B19C6E4DF639C192AC4FD962 /* Pods-Chef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Chef/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/VK-ios-sdk",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChefTeam.Chef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chef/BridgeObjC/Chef-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		AF055D391D314C550014282C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A29F34AF2A3D2093DFECDC38 /* Pods-Chef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Chef/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/VK-ios-sdk",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChefTeam.Chef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chef/BridgeObjC/Chef-Bridging-Header.h";
 			};
 			name = Release;
 		};

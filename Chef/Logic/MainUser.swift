@@ -24,4 +24,18 @@ class MainUser {
         }
         else { return nil }
     }
+    
+    class func registerInService(token: String) {
+        let url = "http://52.34.107.168/api/Accounts/login/vk"
+        var data = Dictionary<String, String>()
+        data["accessToken"] = token
+        let jsonData = try! NSJSONSerialization.dataWithJSONObject(data, options: .PrettyPrinted)
+        
+        let proc = HTTPProcessor()
+        
+        proc.sendRequest(RequestType.POST, url: url, data: jsonData) { (data, error) in
+            print("\(error)\n\(error?.userInfo)")
+            print("\(data)")
+        }
+    }
 }

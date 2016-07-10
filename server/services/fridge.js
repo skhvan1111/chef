@@ -1,6 +1,6 @@
 module.exports.get = get;
 function get(currentUser){
-	return app.models.Fridge.findOne({"owner._id": currentUser._id})
+	return app.models.Fridge.findOne({"ownerId": currentUser._id})
 		.then((fridge)=>{
 			if(fridge) return fridge;
 			return createFridge(currentUser);

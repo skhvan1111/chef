@@ -26,7 +26,13 @@ class HTTPProcessor: HTTP {
     
     func sendRequest(type: RequestType, url: String, data: NSData, compl: (NSData?, NSError?) -> Void) {
         
-        let uri = NSURL(string: url+"?access_token=\(MainUser.loadToken()!)")!
+        var uri: NSURL = NSURL()
+        
+        if MainUser.loadToken() != nil {
+            uri = NSURL(string: url+"?access_token=\(MainUser.loadToken()!)")!
+        } else {
+            uri = NSURL(string: url)!
+        }
         
         let req = NSMutableURLRequest(URL: uri)
         

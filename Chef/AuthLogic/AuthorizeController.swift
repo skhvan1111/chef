@@ -16,13 +16,18 @@ class AuthorizeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if MainUser.loadToken() != nil {
-            self.performSegueWithIdentifier("AuthAccepted", sender: self)
-        }
         
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if MainUser.loadToken() != nil {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.performSegueWithIdentifier("AuthAccepted", sender: self)
+            })
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

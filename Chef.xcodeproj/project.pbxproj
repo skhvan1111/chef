@@ -36,7 +36,6 @@
 		AF9A95791D321A0D00A24512 /* RecipeEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A95781D321A0D00A24512 /* RecipeEndViewController.swift */; };
 		AF9A957C1D3221E100A24512 /* AuthorizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A957B1D3221E100A24512 /* AuthorizeController.swift */; };
 		AF9A957E1D3222B200A24512 /* AuthorizeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A957D1D3222B200A24512 /* AuthorizeUser.swift */; };
-		BD5DCC9548FA0D3600F8E950 /* libPods-Chef.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E56377D82B45CA7DF18402 /* libPods-Chef.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD5DCC9548FA0D3600F8E950 /* libPods-Chef.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

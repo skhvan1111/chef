@@ -14,10 +14,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let product = Product(id: "5781186188daeed863ec163f", name: "asd", imageUrl: "asd.jpg")
-        FridgeRequester.deleteProductFromFridge(product.getId()) { (isDeleted) in
-            print("PRODUCT DELETE: \(isDeleted)")
-        }
     }
 
     override func didReceiveMemoryWarning() {

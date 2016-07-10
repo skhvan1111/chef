@@ -78,8 +78,8 @@ class FridgeRequester {
         }
     }
     
-    class func deleteProductFromFridge(productId: String, completion: (Bool)->Void) {
-        let url = FridgeUrls.deleteProduct.rawValue+productId
+    class func deleteProductFromFridge(product: Product, completion: (Bool)->Void) {
+        let url = FridgeUrls.deleteProduct.rawValue+product.getId()
         
         self.processor.sendRequest(RequestType.DELETE, url: url, data: NSData()) { (data, error) in
             if error != nil { print("\(error)\n\(error?.userInfo)"); completion(false); return }

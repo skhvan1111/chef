@@ -271,12 +271,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF055D371D314C550014282C /* Build configuration list for PBXNativeTarget "Chef" */;
 			buildPhases = (
-				174E3969DE75F7D5881F0D99 /* [CP] Check Pods Manifest.lock */,
 				AF055D131D314C550014282C /* Sources */,
 				AF055D141D314C550014282C /* Frameworks */,
 				AF055D151D314C550014282C /* Resources */,
-				3A9E90975865A41E1CA6135A /* [CP] Embed Pods Frameworks */,
-				5F0EEA76E86D98E535B0EDAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,54 +359,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		174E3969DE75F7D5881F0D99 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3A9E90975865A41E1CA6135A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chef/Pods-Chef-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5F0EEA76E86D98E535B0EDAD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chef/Pods-Chef-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF055D131D314C550014282C /* Sources */ = {

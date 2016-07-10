@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
+class ViewController: UIViewController {
     
     private var token: String = ""
 
@@ -16,9 +16,9 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let instance = VKSdk.initializeWithAppId("5539003")
-        instance.registerDelegate(self as VKSdkDelegate)
-        instance.uiDelegate = self
+//        let instance = VKSdk.initializeWithAppId("5539003")
+//        instance.registerDelegate(self as VKSdkDelegate)
+//        instance.uiDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,24 +34,24 @@ class ViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         self.presentViewController(controller, animated: true, completion: nil)
     }
 
-    func vkSdkAccessAuthorizationFinishedWithResult(result: VKAuthorizationResult!) {
-        print("Result: \(result.state.rawValue)")
-        if result.state.rawValue == 2 {
-            // Success auth
-            self.token = VKSdk.accessToken().accessToken
-            MainUser.registerInService(self.token)
-        } else {
-            self.showAlert("Ошибка авторизации")
-        }
-    }
-    
-    func vkSdkUserAuthorizationFailed() {
-        self.showAlert("Ошибка авторизации")
-    }
-    
-    func vkSdkNeedCaptchaEnter(captchaError: VKError!) {
-        self.showAlert("Необходимо ввести капчу!")
-    }
+//    func vkSdkAccessAuthorizationFinishedWithResult(result: VKAuthorizationResult!) {
+//        print("Result: \(result.state.rawValue)")
+//        if result.state.rawValue == 2 {
+//            // Success auth
+//            self.token = VKSdk.accessToken().accessToken
+//            MainUser.registerInService(self.token)
+//        } else {
+//            self.showAlert("Ошибка авторизации")
+//        }
+//    }
+//    
+//    func vkSdkUserAuthorizationFailed() {
+//        self.showAlert("Ошибка авторизации")
+//    }
+//    
+//    func vkSdkNeedCaptchaEnter(captchaError: VKError!) {
+//        self.showAlert("Необходимо ввести капчу!")
+//    }
     
     private func showAlert(text: String) {
         dispatch_async(dispatch_get_main_queue()) { 

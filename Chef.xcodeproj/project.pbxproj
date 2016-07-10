@@ -24,7 +24,6 @@
 		AF4504441D319E14007B459A /* HTTPProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504431D319E14007B459A /* HTTPProcessor.swift */; };
 		AF4504481D31BD4C007B459A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504471D31BD4C007B459A /* Recipe.swift */; };
 		AF45044A1D31BDC7007B459A /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504491D31BDC7007B459A /* Step.swift */; };
-		AF45044C1D31D19B007B459A /* libVK-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF45044B1D31D19B007B459A /* libVK-ios-sdk.a */; };
 		AF4504521D31DF2D007B459A /* ProductsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504511D31DF2D007B459A /* ProductsAddViewController.swift */; };
 		AF4504561D31E1E3007B459A /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4504551D31E1E3007B459A /* ProductViewCell.swift */; };
 		AF9A956B1D3201A100A24512 /* FridgeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9A956A1D3201A100A24512 /* FridgeViewCell.swift */; };
@@ -90,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF45044C1D31D19B007B459A /* libVK-ios-sdk.a in Frameworks */,
 				BD5DCC9548FA0D3600F8E950 /* libPods-Chef.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,10 +557,7 @@
 				INFOPLIST_FILE = Chef/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/VK-ios-sdk",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChefTeam.Chef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chef/BridgeObjC/Chef-Bridging-Header.h";
@@ -580,10 +575,7 @@
 				INFOPLIST_FILE = Chef/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/VK-ios-sdk",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChefTeam.Chef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chef/BridgeObjC/Chef-Bridging-Header.h";

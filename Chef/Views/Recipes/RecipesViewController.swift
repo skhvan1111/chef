@@ -52,6 +52,7 @@ extension RecipesViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("RecipeCell") as! RecipeViewCell
         let recipe = self.recipes[indexPath.row]
         cell.recipeName.text = recipe.getName()
+        cell.recipeImage.image = UIImage(named:"productPlaceholder")
         cell.recipeImage.downloadedFrom(recipe.getImageUrl());
         if recipe.getCountOfOutProducts() > 0 {
             cell.recipeProductsLost.text = "Нехватает продуктов: \(recipe.getCountOfOutProducts())"

@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7aP-Lo-RHR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7aP-Lo-RHR">
                                 <rect key="frame" x="40" y="297" width="296" height="30"/>
                                 <color key="backgroundColor" red="0.77238424289999996" green="0.89903059549999997" blue="0.87005046890000004" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -240,20 +240,20 @@
         <scene sceneID="41O-0s-Tsy">
             <objects>
                 <tableViewController id="Xd0-C3-Lic" customClass="RecipesViewController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" id="8sg-Xi-b3n">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="109" sectionHeaderHeight="28" sectionFooterHeight="28" id="8sg-Xi-b3n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="105" id="HV0-0i-MHH" customClass="RecipeViewCell" customModule="Chef" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="105"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="109" id="HV0-0i-MHH" customClass="RecipeViewCell" customModule="Chef" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HV0-0i-MHH" id="fEv-8f-ANk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Salads" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-Xr-gOn">
-                                            <rect key="frame" x="8" y="4" width="124" height="92"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Куриное филе с грибами и сыром" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-Xr-gOn">
+                                            <rect key="frame" x="8" y="4" width="125" height="92"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Суши по карибски" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gG9-M6-qG1">
                                             <rect key="frame" x="140" y="8" width="227" height="38"/>
@@ -579,9 +579,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Salads" width="1024" height="768"/>
         <image name="list-fat-7" width="30" height="30"/>
         <image name="shopping-cart-7" width="30" height="30"/>
+        <image name="Куриное филе с грибами и сыром" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="S3Q-Si-hLh"/>

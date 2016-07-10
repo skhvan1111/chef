@@ -28,6 +28,7 @@ class Product {
     func setAviability(outOfFrige: Bool) { self.outOfFrige = outOfFrige }
     func setChecked(check: Bool) { self.isChecked = check }
     func isCheck() -> Bool { return self.isChecked }
+    func isOutInFridge() -> Bool {return self.outOfFrige }
 }
 
 class ProductMapper {

@@ -43,7 +43,7 @@
         <!--Рецепты-->
         <scene sceneID="n25-Yy-NPG">
             <objects>
-                <viewController id="xUF-na-6pN" customClass="CategoryRecepiesViewController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xUF-na-6pN" customClass="LoadRecipesViewController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aYi-64-eLr"/>
                         <viewControllerLayoutGuide type="bottom" id="hvK-ed-eoA"/>
@@ -51,6 +51,15 @@
                     <view key="view" contentMode="scaleToFill" id="oPr-AW-yMg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNr-cM-h33">
+                                <rect key="frame" x="81" y="319" width="213" height="30"/>
+                                <state key="normal" title="Показать доступные рецепты"/>
+                                <connections>
+                                    <segue destination="Xd0-C3-Lic" kind="show" id="JM7-rw-hbn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Рецепты" id="1uJ-de-Uem"/>
@@ -58,25 +67,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgr-XP-egN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1747.5" y="366.5"/>
+            <point key="canvasLocation" x="1738.5" y="366.5"/>
         </scene>
-        <!--All Recepies View Controller-->
+        <!--Recipes View Controller-->
         <scene sceneID="41O-0s-Tsy">
             <objects>
-                <tableViewController id="Xd0-C3-Lic" customClass="AllRecepiesViewController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8sg-Xi-b3n">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController id="Xd0-C3-Lic" customClass="RecipesViewController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="8sg-Xi-b3n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HV0-0i-MHH">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="80" id="HV0-0i-MHH" customClass="RecipeViewCell" customModule="Chef" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HV0-0i-MHH" id="fEv-8f-ANk">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-Xr-gOn">
+                                            <rect key="frame" x="8" y="4" width="124" height="71"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Суши по карибски" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gG9-M6-qG1">
+                                            <rect key="frame" x="140" y="8" width="227" height="38"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Нехватает продуктов: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXf-Sz-hhO">
+                                            <rect key="frame" x="140" y="54" width="227" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="recipeImage" destination="P6K-Xr-gOn" id="5ag-AG-AWs"/>
+                                    <outlet property="recipeName" destination="gG9-M6-qG1" id="cNW-lp-khb"/>
+                                    <outlet property="recipeProductsLost" destination="RXf-Sz-hhO" id="ikm-kF-nKD"/>
                                     <segue destination="k9L-VZ-pKs" kind="show" id="L9v-Mu-veZ"/>
                                 </connections>
                             </tableViewCell>
@@ -89,7 +118,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCv-S6-dvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2237" y="367"/>
+            <point key="canvasLocation" x="2218.5" y="366.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wPp-x5-RcX">
@@ -100,14 +129,14 @@
                         <viewControllerLayoutGuide type="bottom" id="SR7-WG-ZhF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5VX-4m-l9B">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eM4-9V-RXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2824" y="367"/>
+            <point key="canvasLocation" x="2630.5" y="366.5"/>
         </scene>
         <!--Холодильник-->
         <scene sceneID="ML9-tO-Ljr">

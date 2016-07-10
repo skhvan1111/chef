@@ -55,6 +55,7 @@ extension FridgeViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("FridgeCell") as! FridgeViewCell
         let product = self.fridge.getProducts()[indexPath.row]
         cell.productName.text = product.getName()
+        cell.productImage.image = UIImage(named:"productPlaceholder");
         cell.productImage.downloadedFrom(product.getImageUrl())
         return cell
     }

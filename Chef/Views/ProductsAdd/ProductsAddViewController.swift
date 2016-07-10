@@ -71,6 +71,7 @@ extension ProductsAddViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("productCell") as! ProductViewCell
         let product = self.products[indexPath.row]
         cell.name.text = self.products[indexPath.row].getName()
+        cell.productImage.image = UIImage(named:"productPlaceholder")
         cell.productImage.downloadedFrom(product.getImageUrl())
         cell.product = product
         if isExistProduct(product) {

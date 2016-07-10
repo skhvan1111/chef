@@ -135,7 +135,6 @@
 			children = (
 				AF9A957A1D3221B900A24512 /* AuthLogic */,
 				AF4504531D31E142007B459A /* Views */,
-				AF45044D1D31D1A0007B459A /* BridgeObjC */,
 				AF45043F1D319DF0007B459A /* Logic */,
 				AF45043A1D319D87007B459A /* Entity */,
 				AF055D1A1D314C550014282C /* AppDelegate.swift */,
@@ -195,7 +194,8 @@
 			children = (
 				AF45044E1D31D1C2007B459A /* Chef-Bridging-Header.h */,
 			);
-			path = BridgeObjC;
+			name = BridgeObjC;
+			path = ../../BridgeObjC;
 			sourceTree = "<group>";
 		};
 		AF4504531D31E142007B459A /* Views */ = {
@@ -203,7 +203,6 @@
 			children = (
 				AF9A95751D32108D00A24512 /* RecipeSteps */,
 				AF9A956E1D32089D00A24512 /* Recipes */,
-				AF4504541D31E154007B459A /* ProductsAdd */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,15 +213,18 @@
 				AF4504511D31DF2D007B459A /* ProductsAddViewController.swift */,
 				AF4504551D31E1E3007B459A /* ProductViewCell.swift */,
 			);
-			path = ProductsAdd;
+			name = ProductsAdd;
+			path = ../ProductsAdd;
 			sourceTree = "<group>";
 		};
 		AF9A956E1D32089D00A24512 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
 				AF9A956F1D3208CD00A24512 /* LoadRecipesViewController.swift */,
-				AF9A95711D320ADE00A24512 /* RecipesViewController.swift */,
 				AF9A95731D320B0200A24512 /* RecipeViewCell.swift */,
+				AF9A95711D320ADE00A24512 /* RecipesViewController.swift */,
+				AF45044D1D31D1A0007B459A /* BridgeObjC */,
+				AF4504541D31E154007B459A /* ProductsAdd */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";

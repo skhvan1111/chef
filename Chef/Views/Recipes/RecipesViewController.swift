@@ -55,7 +55,7 @@ extension RecipesViewController {
         cell.recipeImage.image = UIImage(named:"productPlaceholder")
         cell.recipeImage.downloadedFrom(recipe.getImageUrl());
         if recipe.getCountOfOutProducts() > 0 {
-            cell.recipeProductsLost.text = "Нехватает продуктов: \(recipe.getCountOfOutProducts())"
+            cell.recipeProductsLost.text = "Не хватает продуктов: \(recipe.getCountOfOutProducts())"
         }
         
         return cell

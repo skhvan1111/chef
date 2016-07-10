@@ -12,6 +12,7 @@ class Product {
     private let name: String
     private let imageUrl: String
     private let id: String
+    private var outOfFrige: Bool = false
     
     init(id: String, name: String, imageUrl: String) {
         self.id = id
@@ -22,6 +23,8 @@ class Product {
     func getId()       -> String { return self.id       }
     func getName()     -> String { return self.name     }
     func getImageUrl() -> String { return self.imageUrl }
+    
+    func setAviability(outOfFrige: Bool) { self.outOfFrige = outOfFrige }
 }
 
 class ProductMapper {
@@ -39,10 +42,18 @@ class ProductMapper {
     }
     
     class func parseProduct(dict: NSDictionary) -> Product {
-        return Product(
-            id:       dict.valueForKey("id") as! String,
-            name:     dict.valueForKey("name") as! String,
-            imageUrl: dict.valueForKey("imageUrl") as! String)
+        
+        let id = dict.valueForKey("id") as! String
+        let name = dict.valueForKey("name") as! String
+        let imgUrl = dict.valueForKey("imageUrl") as! String
+        
+        let product = Product(id: id, name: name, imageUrl: imgUrl)
+        
+        if let isOut = dict.valueForKey("isOutOfFridge") as? Bool {
+            product.setAviability(isOut)
+        }
+        
+        return product
     }
     
     // Parse collection of products

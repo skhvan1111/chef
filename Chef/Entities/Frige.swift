@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Frige {
+class Fridge {
     
     private var products: [Product] = []
     
@@ -30,36 +30,37 @@ class Frige {
 }
 
 
-class FrigeMapper {
-    class func parseFrige(data: NSData) -> Frige {
+class FridgeMapper {
+    class func parseFridge(data: NSData) -> Fridge {
         let parsedData = try! NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
-        if let productsArray = (parsedData as! NSDictionary).valueForKey("products") as? NSArray {
-            let frige = Frige()
+        let fridgeData = (parsedData as! NSDictionary).valueForKey("fridge")
+        if let productsArray = fridgeData?.valueForKey("products") as? NSArray {
+            let fridge = Fridge()
             
             for productData in productsArray {
-                frige.add(ProductMapper.parseProduct(productData as! NSDictionary))
+                fridge.add(ProductMapper.parseProduct(productData as! NSDictionary))
             }
             
-            return frige
+            return fridge
         } else {
-            return Frige()
+            return Fridge()
         }
     }
 }
 
 
-class FrigeRequester {
+class FridgeRequester {
     static private let processor: HTTP = HTTPProcessor.shared
     
-    class func loadFrige(completion: (Frige) -> Void) {
-        let url = FrigeUrls.getFrige.rawValue
+    class func loadFridge(completion: (Fridge) -> Void) {
+        let url = FridgeUrls.getFrige.rawValue
         self.processor.sendRequest(RequestType.GET, url: url, data: NSData()) { (data, error) in
             if error != nil { print("\(error)\n\n\(error?.userInfo)"); abort() }
-            completion(FrigeMapper.parseFrige(data!))
+            completion(FridgeMapper.parseFridge(data!))
         }
     }
     
-    class func addProductsToFrige(products: [Product], completion: (Bool) -> Void) {
+    class func addProductsToFridge(products: [Product], completion: (Bool) -> Void) {
         var productIds: [String] = []
         
         for product in products {
@@ -68,7 +69,7 @@ class FrigeRequester {
         
         let jsonIds = try! NSJSONSerialization.dataWithJSONObject(productIds, options: .PrettyPrinted)
         
-        let url = FrigeUrls.addToFrige.rawValue
+        let url = FridgeUrls.addToFrige.rawValue
         
         self.processor.sendRequest(RequestType.POST, url: url, data: jsonIds) { (data, error) in
             if error != nil { print("\(error)\n\n\(error?.userInfo)"); completion(false); return }
@@ -77,8 +78,8 @@ class FrigeRequester {
         }
     }
     
-    class func deleteProductFromFrige(productId: String, completion: (Bool)->Void) {
-        let url = FrigeUrls.deleteProduct.rawValue+productId
+    class func deleteProductFromFridge(productId: String, completion: (Bool)->Void) {
+        let url = FridgeUrls.deleteProduct.rawValue+productId
         
         self.processor.sendRequest(RequestType.DELETE, url: url, data: NSData()) { (data, error) in
             if error != nil { print("\(error)\n\(error?.userInfo)"); completion(false); return }
@@ -89,7 +90,7 @@ class FrigeRequester {
 }
 
 
-enum FrigeUrls: String {
+enum FridgeUrls: String {
     case getFrige = "http://52.34.107.168/api/Fridge"
     case addToFrige = "http://52.34.107.168/api/Fridge/products"
     case deleteProduct = "http://52.34.107.168/api/Fridge/products/"

@@ -56,7 +56,6 @@ extension FridgeViewController {
         let product = self.fridge.getProducts()[indexPath.row]
         cell.productName.text = product.getName()
         cell.productImage.downloadedFrom(product.getImageUrl())
-        product.getImageUrl()
         return cell
     }
     

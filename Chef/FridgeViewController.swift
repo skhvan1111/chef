@@ -91,8 +91,10 @@ extension UIImageView {
                 let image = UIImage(data: data)
                 else { return }
             
-            self.image = image
             
+            dispatch_async(dispatch_get_main_queue()) {
+                self.image = image
+            }
 //            DispatchQueue.main.sync() { () -> Void in
 //                self.image = image
 //            }

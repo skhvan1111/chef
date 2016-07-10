@@ -17,6 +17,8 @@ class Step {
         self.description = descr
         self.imageUrl = imgUrl
     }
+    
+    func getDescription() -> String { return self.description }
 }
 
 

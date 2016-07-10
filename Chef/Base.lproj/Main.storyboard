@@ -165,7 +165,6 @@
                                     <outlet property="recipeImage" destination="P6K-Xr-gOn" id="5ag-AG-AWs"/>
                                     <outlet property="recipeName" destination="gG9-M6-qG1" id="cNW-lp-khb"/>
                                     <outlet property="recipeProductsLost" destination="RXf-Sz-hhO" id="ikm-kF-nKD"/>
-                                    <segue destination="k9L-VZ-pKs" kind="show" id="L9v-Mu-veZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -179,23 +178,91 @@
             </objects>
             <point key="canvasLocation" x="2184.5" y="366.5"/>
         </scene>
-        <!--View Controller-->
+        <!--asd-->
         <scene sceneID="wPp-x5-RcX">
             <objects>
-                <viewController id="k9L-VZ-pKs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeInfo" title="asd" id="k9L-VZ-pKs" customClass="RecipeStepsController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aQD-Lr-VsA"/>
                         <viewControllerLayoutGuide type="bottom" id="SR7-WG-ZhF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5VX-4m-l9B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uS5-xR-y0h">
+                                <rect key="frame" x="0.0" y="64" width="375" height="193"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WSP-Ut-D35">
+                                <rect key="frame" x="20" y="265" width="335" height="282"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqU-N0-jEA">
+                                <rect key="frame" x="20" y="569" width="335" height="41"/>
+                                <color key="backgroundColor" red="0.78138036960000001" green="0.9095017997" blue="0.88018413529999995" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Начать готовку"/>
+                                <connections>
+                                    <action selector="nextStep:" destination="k9L-VZ-pKs" eventType="touchUpInside" id="fR4-ux-ZLt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yv-3L-D3H">
+                                <rect key="frame" x="20" y="570" width="335" height="38"/>
+                                <color key="backgroundColor" red="0.78138036960000001" green="0.9095017997" blue="0.88018413529999995" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Следующий шаг"/>
+                                <connections>
+                                    <action selector="stepNext:" destination="k9L-VZ-pKs" eventType="touchUpInside" id="6AD-NG-QAE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mainButton" destination="nqU-N0-jEA" id="Eu3-QW-EaZ"/>
+                        <outlet property="mainImage" destination="uS5-xR-y0h" id="TFx-7c-FI5"/>
+                        <outlet property="stepButton" destination="0yv-3L-D3H" id="Djl-N2-MH4"/>
+                        <outlet property="textDecription" destination="WSP-Ut-D35" id="NOf-Hz-eLg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eM4-9V-RXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2630.5" y="366.5"/>
+            <point key="canvasLocation" x="2735" y="333"/>
+        </scene>
+        <!--SuccessView-->
+        <scene sceneID="g7m-jn-5Ma">
+            <objects>
+                <viewController storyboardIdentifier="SuccessView" title="SuccessView" id="ghc-2m-Bcm" customClass="RecipeEndViewController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e8i-XV-NKH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y2A-xG-k1J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EEh-Az-KKG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вы приготовили блюдо. Поздравляем!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-vq-UYV">
+                                <rect key="frame" x="33" y="323" width="308" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzC-AI-1WC">
+                                <rect key="frame" x="122" y="405" width="131" height="30"/>
+                                <color key="backgroundColor" red="0.78138036960000001" green="0.9095017997" blue="0.88018413529999995" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Назад к рецептам"/>
+                                <connections>
+                                    <action selector="backToRecipes:" destination="ghc-2m-Bcm" eventType="touchUpInside" id="7Ad-Sv-pGD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vqt-RB-Zvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3377" y="333"/>
         </scene>
         <!--Холодильник-->
         <scene sceneID="ML9-tO-Ljr">

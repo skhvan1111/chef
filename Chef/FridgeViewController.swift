@@ -55,6 +55,8 @@ extension FridgeViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("FridgeCell") as! FridgeViewCell
         let product = self.fridge.getProducts()[indexPath.row]
         cell.productName.text = product.getName()
+        cell.productImage.downloadedFrom(product.getImageUrl())
+        product.getImageUrl()
         return cell
     }
     
@@ -76,5 +78,24 @@ extension FridgeViewController {
                 }
             })
         }
+    }
+}
+
+extension UIImageView {
+    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = UIViewContentMode.ScaleAspectFit) {
+        guard let url = NSURL(string: link) else { return }
+        contentMode = mode
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            guard
+                let data = data where error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            
+            self.image = image
+            
+//            DispatchQueue.main.sync() { () -> Void in
+//                self.image = image
+//            }
+            }.resume()
     }
 }

@@ -37,6 +37,7 @@ class Recipe {
     func getName() -> String { return self.name }
     func getDecription() -> String { return self.description }
     func getSteps() -> [Step] { return self.steps }
+    func getImageUrl() -> String { return self.imageUrl }
 }
 
 

@@ -203,6 +203,7 @@
 		AF4504531D31E142007B459A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AF9A95751D32108D00A24512 /* RecipeSteps */,
 				AF9A956E1D32089D00A24512 /* Recipes */,
 				AF4504541D31E154007B459A /* ProductsAdd */,
 			);
@@ -226,6 +227,13 @@
 				AF9A95731D320B0200A24512 /* RecipeViewCell.swift */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		AF9A95751D32108D00A24512 /* RecipeSteps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RecipeSteps;
 			sourceTree = "<group>";
 		};
 		DAD3D83FB79018C2990D1DC6 /* Pods */ = {

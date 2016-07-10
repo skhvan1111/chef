@@ -32,6 +32,17 @@ class RecipesViewController: UITableViewController {
     }
 }
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 
 extension RecipesViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

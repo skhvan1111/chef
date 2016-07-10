@@ -72,6 +72,7 @@ extension ProductsAddViewController {
         let product = self.products[indexPath.row]
         cell.name.text = self.products[indexPath.row].getName()
         cell.product = product
+        
         if isExistProduct(product) {
             cell.accessoryType = .Checkmark
         } else {
@@ -83,6 +84,7 @@ extension ProductsAddViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! ProductViewCell
         let product = cell.product
+        cell.tintColor = UIColor(red: 98.0/255.0, green: 175.0/255.0, blue: 185.0/255.0, alpha: 1.0)
         if isExistProduct(product) {
             deleteProduct(product)
             cell.accessoryType = .None

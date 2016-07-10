@@ -1,10 +1,10 @@
 module.exports = function(Account) {
-	delete Account.validations.password;
-	delete Account.validations.email;
+	// delete Account.validations.password;
+	// delete Account.validations.email;
 
 	var methods = [
 		{name:"updateAttributes", isStatic: true},
-		{name:"create", isStatic: true},
+		// {name:"create", isStatic: true},
 		{name:"upsert", isStatic: true},
 		{name:"exists", isStatic: true},
 		{name:"findById", isStatic: true},
@@ -16,7 +16,7 @@ module.exports = function(Account) {
 		{name:"createChangeStream", isStatic: true},
 		{name:"updateAll", isStatic: true},
 		{name:"updateAttributes", isStatic: false},
-		{name:"login", isStatic: true},
+		// {name:"login", isStatic: true},
 		{name:"confirm", isStatic: true},
 		{name:"resetPassword", isStatic: true},
 		{name: "__get__accessTokens", isStatic: false},
@@ -37,16 +37,16 @@ module.exports = function(Account) {
 
 	
 	//******************* Login by VK
-	Account.remoteMethod("loginVK", {
-		accepts: {arg: "accessToken", type: "string"},
-	    returns: {arg: "profile", type: "string"},
-	    description: "Login a user via VK access token",
-	    http: {
-	      path: "/login/vk",
-	      verb: "POST"
-	    }
-	})
-	Account.loginVK = function(token){
-		return services.social.getAccessToken("vkontakte", token);
-	}
+	// Account.remoteMethod("loginVK", {
+	// 	accepts: {arg: "accessToken", type: "string"},
+	//     returns: {arg: "profile", type: "string"},
+	//     description: "Login a user via VK access token",
+	//     http: {
+	//       path: "/login/vk",
+	//       verb: "POST"
+	//     }
+	// })
+	// Account.loginVK = function(token){
+	// 	return services.social.getAccessToken("vkontakte", token);
+	// }
 };

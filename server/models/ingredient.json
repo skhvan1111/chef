@@ -1,0 +1,17 @@
+{
+  "name": "Ingredient",
+  "base": "Product",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isOutOfFridge": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

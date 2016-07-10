@@ -52,6 +52,7 @@ class ProductsAddViewController: UITableViewController {
         FridgeRequester.addProductsToFridge(self.checkedProducts) { (isLoaded) in
             dispatch_async(dispatch_get_main_queue(), {
                 if isLoaded == true {
+                    Model.shared.fridgeViewController?.viewDidLoad()
                     self.navigationController?.popViewControllerAnimated(true)
                 }
                 else { print("Error!") }

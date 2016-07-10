@@ -17,6 +17,8 @@ class FridgeViewController: UITableViewController {
         navigationController!.navigationBar.titleTextAttributes = ([NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 20)!,
                                                                     NSForegroundColorAttributeName: UIColor.whiteColor()])
         
+        if Model.shared.fridgeViewController == nil { Model.shared.fridgeViewController = self }
+        
         FridgeRequester.loadFridge { (fridge) in
             self.fridge = fridge
             dispatch_async(dispatch_get_main_queue(), {
@@ -28,6 +30,12 @@ class FridgeViewController: UITableViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

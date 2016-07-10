@@ -51,98 +51,6 @@
                     <view key="view" contentMode="scaleToFill" id="oPr-AW-yMg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSo-6F-z51">
-                                <rect key="frame" x="0.0" y="117" width="188" height="145"/>
-                                <state key="normal" image="Snacks"/>
-                                <connections>
-                                    <action selector="selectSnack:" destination="xUF-na-6pN" eventType="touchUpInside" id="xw2-qv-GwR"/>
-                                    <segue destination="Xd0-C3-Lic" kind="show" id="XvX-gQ-sfR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ul-1q-mdE">
-                                <rect key="frame" x="0.0" y="447" width="188" height="145"/>
-                                <state key="normal" image="Breakfast"/>
-                                <connections>
-                                    <action selector="selectBreakfast:" destination="xUF-na-6pN" eventType="touchUpInside" id="UCG-jn-4Y6"/>
-                                    <segue destination="Xd0-C3-Lic" kind="show" id="d6y-1V-vB3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzM-VK-Uk5">
-                                <rect key="frame" x="187" y="447" width="188" height="145"/>
-                                <state key="normal" title="Button" image="Bakery"/>
-                                <connections>
-                                    <action selector="selectBakery:" destination="xUF-na-6pN" eventType="touchUpInside" id="IK4-lP-t8q"/>
-                                    <segue destination="Xd0-C3-Lic" kind="show" id="Aht-CP-7k4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44k-Ew-XRo">
-                                <rect key="frame" x="187" y="285" width="188" height="145"/>
-                                <state key="normal" title="Button" image="Meet"/>
-                                <connections>
-                                    <action selector="selectMeet:" destination="xUF-na-6pN" eventType="touchUpInside" id="dEj-SP-Tm7"/>
-                                    <segue destination="Xd0-C3-Lic" kind="show" id="kfP-ec-s1K"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yt2-c5-WhU">
-                                <rect key="frame" x="187" y="117" width="188" height="145"/>
-                                <state key="normal" title="Button" image="Healthy Food"/>
-                                <connections>
-                                    <action selector="selectHealthyFood:" destination="xUF-na-6pN" eventType="touchUpInside" id="Dm9-sX-H0g"/>
-                                    <segue destination="Xd0-C3-Lic" kind="show" id="QMD-eZ-1ND"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cJ-rZ-Ra0">
-                                <rect key="frame" x="0.0" y="285" width="188" height="145"/>
-                                <state key="normal" title="Button" image="Salads"/>
-                                <connections>
-                                    <action selector="selectSalad:" destination="xUF-na-6pN" eventType="touchUpInside" id="uUa-kO-0qZ"/>
-                                    <segue destination="Xd0-C3-Lic" kind="show" id="2cs-od-9RH"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Закуски" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ0-qj-xaV">
-                                <rect key="frame" x="0.0" y="263" width="188" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Правильное питание" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apL-lc-CEN">
-                                <rect key="frame" x="187" y="263" width="188" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Салаты" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6o-zY-dA4">
-                                <rect key="frame" x="0.0" y="431" width="188" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Горячее" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ari-Vh-dTm">
-                                <rect key="frame" x="187" y="431" width="188" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Завтрак" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THd-eq-1eE">
-                                <rect key="frame" x="0.0" y="597" width="188" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Выпечка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaT-6j-Kyd">
-                                <rect key="frame" x="187" y="597" width="188" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Выберите категорию" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ust-Ke-2yZ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="54"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Рецепты" id="1uJ-de-Uem"/>
@@ -157,15 +65,15 @@
             <objects>
                 <tableViewController id="Xd0-C3-Lic" customClass="AllRecepiesViewController" customModule="Chef" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8sg-Xi-b3n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HV0-0i-MHH">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HV0-0i-MHH" id="fEv-8f-ANk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -181,7 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCv-S6-dvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2189.5" y="366.5"/>
+            <point key="canvasLocation" x="2237" y="367"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wPp-x5-RcX">
@@ -192,14 +100,14 @@
                         <viewControllerLayoutGuide type="bottom" id="SR7-WG-ZhF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5VX-4m-l9B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eM4-9V-RXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2631.5" y="366.5"/>
+            <point key="canvasLocation" x="2824" y="367"/>
         </scene>
         <!--Холодильник-->
         <scene sceneID="ML9-tO-Ljr">
@@ -369,17 +277,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bakery" width="1024" height="768"/>
-        <image name="Breakfast" width="1024" height="768"/>
-        <image name="Healthy Food" width="1024" height="768"/>
-        <image name="Meet" width="1024" height="768"/>
-        <image name="Salads" width="1024" height="768"/>
-        <image name="Snacks" width="1024" height="768"/>
         <image name="list-fat-7" width="30" height="30"/>
         <image name="shopping-cart-7" width="30" height="30"/>
         <image name="vk" width="200" height="200"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="kfP-ec-s1K"/>
-    </inferredMetricsTieBreakers>
 </document>
